@@ -12,12 +12,12 @@
 </head>
 <body>
 <header>
-	<h1>Sophie Bluel <span>Architecte d'inteérieur</span></h1>
+	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
 		<ul>
-			<li>projets</li>
-			<li>contact</li>
-			<li>login</li>
+			<li><a href="/FrontEnd/index.html">projets</a></li>
+			<li><a href="#contact">contact</a></li>
+			<li><a href="/FrontEnd/login.html">login</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
@@ -36,8 +36,33 @@
 	</section>
 	<section id="portfolio">
 		<h2>Mes Projets</h2>
+
+		<!-- <button class="btn-filter">Objets</button> -->
+		
+		<form method="post" action="#" class="filtres">
+
+
+                <div class="filters-bubble">
+
+                    <input type="checkbox" name="tous" value="tous" id="tous" class="tous">
+                    <label for="tous">Tous</label>
+
+					<input type="checkbox" name="objets" value="objets" id="objets" class="objets">
+                    <label for="objets">Objets</label>
+
+					<input type="checkbox" name="appartements" value="appartements" id="appartements" class="appartements">
+                    <label for="appartements">Appartements</label>
+
+					<input type="checkbox" name="hotels-&-restaurants" value="hotels-&-restaurants" id="hotels-&-restaurants" class="hotels-et-restaurants">
+                    <label for="hotels-&-restaurants">Hotels & Restaurants</label>
+                </div>
+
+            </form>
+
 		<div class="gallery">
-			<figure>
+
+			
+			<!-- <figure>
 				<img src="assets/images/abajour-tahina.png" alt="Abajour Tahina">
 				<figcaption>Abajour Tahina</figcaption>
 			</figure>
@@ -80,11 +105,11 @@
 			<figure>
 				<img src="assets/images/hotel-first-arte-new-delhi.png" alt="Hotel First Arte - New Delhi">
 				<figcaption>Hotel First Arte - New Delhi</figcaption>
-			</figure>
+			</figure> -->
 		</div>
 	</section>
 	<section id="contact">
-		<h2>Contact</h2>
+		<h2 >Contact</h2>
 		<p>Vous avez un projet ? Discutons-en !</p>
 		<form action="#" method="post">
 			<label for="name">Nom</label>
@@ -105,5 +130,6 @@
 		</ul>
 	</nav>
 </footer>
+<script src="JS/index.js" ></script>
 </body>
 </html>
