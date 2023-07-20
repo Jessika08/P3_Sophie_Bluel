@@ -1,4 +1,36 @@
-console.log("ici");//affiche "ici" dans la console
+/*------------------------page de connexion-----------------------*/
+
+// recupération token
+const token = window.sessionStorage.getItem("token");
+
+
+// affichage du contenu selon le statut de connexion
+let hiddenElements = document.querySelectorAll(".admin");
+
+// si le token est null, les fonctions admin (boutons et liens) n'apparaissent pas 
+if (token !== null) {
+  document.getElementById('login-button').style.display = 'none';
+  document.getElementById('logout-button').style.display = 'inline';
+  hiddenElements.forEach(hiddenElements => hiddenElements.style.display = "inline");
+  document.querySelector(".edition-mode").style.display = "flex";
+
+  // si le token est bon, les fonctions du mode admin (boutons et liens) sont disponible
+} else {
+  document.getElementById('logout-button').style.display = 'none';
+  document.getElementById('login-button').style.display = 'inline';
+  hiddenElements.forEach(hiddenElements => hiddenElements.style.display = "none");
+  document.querySelector(".edition-mode").style.display = "none";
+
+}
+
+//suppression du token à la déconnexion
+document.getElementById("logout-button").addEventListener("click", async function() {
+  window.sessionStorage.removeItem("token");
+})
+
+
+
+
 
 /*-----------Récupérer dynamiquement les données des travaux via l’API------------------------------*/
 let projets = [];
@@ -100,10 +132,3 @@ buttonAll.addEventListener("click", function() {
  });
 
  
-/*------------------------page de connexion-----------------------*/
-
-// recupération token
-const token = window.sessionStorage.getItem("token");
-
-// affichage du contenu selon le statut de connexion
-let hiddenElements = document.querySelectorAll(".admin");

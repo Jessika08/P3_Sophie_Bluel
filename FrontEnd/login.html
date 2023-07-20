@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Sophie Bluel - Login</title>
@@ -10,9 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
     <script src="JS/index.js" type="module" defer></script>
-    <script src="https://kit.fontawesome.com/6a0390c8f4.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/53c9d558a2.js" crossorigin="anonymous"></script>
+    <script src="JS/login.js" type="module" defer></script>
 </head>
 <body>
+
     <header>
         <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
@@ -20,7 +22,9 @@
 			<li><a href="/FrontEnd/index.html">projet</a></li>
 			<li><a href="/FrontEnd/index.html#contact">contact</a></li>
 			<li><a href="/FrontEnd/login.html">login</a></li>
+            <li><a href="/FrontEnd/index.html" id="logout-button">déconnexion</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+            
 		</ul>
     </header>
 
@@ -29,14 +33,17 @@
         <section id="login">
             <h2>Log in</h2>
 
-            <form method= "post" action="#" class="formulaire-connexion">
+            <form class="formulaire-connexion">
+
+                <div class="alert">Identifiant ou mot de passe incorrect</div>
+
                 <label for="email">E-mail</label>
-                <input type="email" name="email" id="email" class="email">
+                <input type="email" name="email" id="username" class="email">
                
                 <label for="password">Mot de passe</label>
                 <input type="password" name="password" id="password" class="password">
                 
-                <button type="submit" class="login">
+                <button class="login" id="to-log-in">
                     <span>Se connecter</span>
                 </button>
                 <a href="#" id="forgot-password">Mot de passe oublié</a>
