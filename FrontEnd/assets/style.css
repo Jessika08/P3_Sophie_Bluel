@@ -215,6 +215,12 @@ margin: auto;
 	text-align: center;
 
 }
+
+.alert{
+	color: #ff0000;
+	display: none;
+	text-align: center;
+}
 #contact h2{
 	margin-bottom: 20px;
 }

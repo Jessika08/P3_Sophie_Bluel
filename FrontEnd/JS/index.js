@@ -213,7 +213,10 @@ function adminGallery(projets) {
       trashBtn.id = item.id;
       trashBtn.addEventListener('click', (e) => {
           e.preventDefault()
-          deleteItem(e.target.id)
+          var res = confirm("Êtes-vous sûr de vouloir supprimer?");
+          if(res){
+              deleteItem(e.target.id)
+          } 
           console.log(e)
       })
 
