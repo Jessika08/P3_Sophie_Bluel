@@ -29,6 +29,95 @@
 
     </div>
 
+<!-- DEBUT modale 1 -->
+
+<div class="container-modale">
+
+</div>
+
+<div class="modale">
+	<div class="container-close-first">
+		<button class="close-modal">
+					<i class="fa-solid fa-xmark fa-xl"></i>
+				</button>
+	</div>
+
+	<h3>Galerie photo</h3>
+
+	<div class="grid-modal">
+
+
+	</div>
+
+
+	<button class="btn-modale">Ajouter une photo</button>
+
+	<button class="delete">
+				Supprimer la galerie
+			</button>
+</div>
+<!-------------FIN modale 1 -------------->
+
+
+ <!--------- DEBUT modale 2 --------------->
+
+ <div class="second-modale">
+	<div class="container-close">
+
+		<button class="back-modal">
+			<i class="fa-solid fa-arrow-left fa-xl"></i>
+		</button>
+
+
+		<button class="close-modal">
+					<i class="fa-solid fa-xmark fa-xl"></i>
+		</button>
+	</div>
+
+	<h3>Ajout photo</h3>
+
+	<form action="" class="newElement">
+
+		<div class="container-ajout">
+
+			<i class="fa-regular fa-image fa-7x"></i>
+			<br>
+
+			<label for="new-img" class="custom-file-upload">
+					 + Ajouter photo
+					<input type="file" id="new-img" name="file" required />
+				</label> jpg, png : 4mo max
+
+		</div>
+
+		<div class="box-new">
+
+			<p>Titre</p>
+
+			<input type="text" id="new-title" placeholder="titre" class="input-new">
+
+			<p>Catégorie</p>
+
+			<select name="category" id="new-category" class="input-new">
+
+			<option value="0">choisir une catégorie</option>
+			<option value="1">Objets</option>
+			<option value="2">Appartements</option>
+			<option value="3">Hôtels & Restaurants</option>
+
+		</select>
+		</div>
+
+	</form>
+
+	<div class="alert">vérifier un des champs</div>
+	<div class="secondAlert"></div>
+
+	<button class="btn-modale-valider" id="newValider">Valider</button>
+</div>
+
+<!------------- FIN modale 2 ----------->
+
 <header>
 	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
@@ -36,7 +125,7 @@
 			<li><a href="/FrontEnd/index.html">projets</a></li>
 			<li><a href="#contact">contact</a></li>
 			<li><a href="/FrontEnd/login.html" id="login-button">login</a></li>
-			<li><a href="/FrontEnd/index.html" id="logout-button">déconnexion</a></li>
+			<li><a href="/FrontEnd/index.html" id="logout-button">logout</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
@@ -48,7 +137,7 @@
 
 			<img src="./assets/images/sophie-bluel.png" alt="">
 
-			<button class="edit-content"><i class="fa-regular fa-pen-to-square"></i>modifier</button>
+			<button class="modifier"><i class="fa-regular fa-pen-to-square"></i>modifier</button>
 
 		</figure>
 
@@ -64,7 +153,7 @@
 		<div class="edit-projects">
 
 			<h2>Mes Projets</h2>
-			<button class="edit-content"><i class="fa-regular fa-pen-to-square"></i>modifier</button>
+			<button class="modifier"><i class="fa-regular fa-pen-to-square"></i>modifier</button>
 			
 		</div>
 

@@ -101,6 +101,7 @@ nav ul {
 nav li {
 	padding: 0 10px;
 	font-size: 1.2em;
+	
 }
 
 nav li img{
@@ -109,10 +110,11 @@ nav li img{
 
 nav a {
 	text-decoration: none;
+	color: #000;
 }
 
 li:hover {
-	color: #B1663C;
+	font-weight: 700;
 }
 #introduction {
 	display: flex;
@@ -250,6 +252,11 @@ margin: auto;
 	height: 50px;
     border: unset;
     font-size: 15px;
+	cursor: pointer;
+}
+
+#to-log-in:hover, #send:hover{
+	background-color: #0E2F28;
 }
 
 
@@ -311,7 +318,7 @@ footer nav ul {
 
 /*modifications de la photo intro*/
 
- .edit-content{
+ .modifier{
 	background-color: unset;
 	border: unset;
 	margin-top: 10px;
@@ -319,7 +326,7 @@ footer nav ul {
 	padding: unset;
  }
 
- .edit-content i {
+ .modifier i {
 	font-size: 15px;
 	padding-right: 10px;
  }
@@ -339,4 +346,232 @@ footer nav ul {
 }
 
  
+/* MODALE */
+    
+.container-modale {
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	background: #16020220;
+}
 
+.modale {
+	margin-top: 100px;
+	display: none;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+	background: #fff;
+	border: 0px solid transparent;
+	border-radius: 20px;
+	width: 630px;
+	height: auto;
+	padding: 50px;
+	position: absolute;
+	left: 50%;
+	margin-left: -315px;
+	z-index: 20;
+}
+
+.btn-modale {
+	background-color: #1D6154;
+	color: #fff;
+	border: 0;
+	border-radius: 60px;
+	height: 40px;
+	padding: 11px 38px 9px 38px;
+	font-family: 'Syne';
+	margin-top: 7px;
+	margin-bottom: 15px;
+}
+
+h3 {
+	font-size: 26px;
+	color: #000;
+}
+
+.grid-modal {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 500px;
+	height: auto;
+	justify-content: flex-start;
+}
+
+.thumbnail {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-start;
+	padding: 5px;
+	height: 110px;
+	width: 83px;
+	margin: 3px;
+	z-index: 1;
+	background-image: url("");
+	background-size: contain;
+	box-sizing: border-box;
+}
+
+.item {
+	display: flex;
+	background-image: none;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+	height: 110px;
+	width: 83px;
+	margin: 3px;
+}
+
+input[type="file"] {
+	display: none;
+}
+
+.custom-file-upload {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #CBD6DC;
+	height: 36px;
+	width: 173px;
+	border-radius: 30px;
+	color: #306685;
+	font-weight: 500;
+}
+
+.edit {
+	margin: 3px;
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+
+.container-close-first {
+	width: 100%;
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+}
+
+.container-close {
+	width: 100%;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.close-modal {
+	border: 0;
+	background: transparent;
+}
+
+.back-modal {
+	border: 0;
+	background: transparent;
+}
+
+.delete {
+	background: transparent;
+	border: 0;
+	color: #ff0000;
+}
+/* MODALE SUPPRESSION */
+
+.container-thumbnail {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	width: 17px;
+	height: 17px;
+	background: #000000;
+	color: #fff;
+	top: -130px;
+	left: 65px;
+	z-index: 10000;
+}
+/* MODALE AJOUT */
+
+.second-modale {
+	margin-top: 100px;
+	display: none;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+	background: #fff;
+	border: 0px solid transparent;
+	border-radius: 20px;
+	width: 630px;
+	height: auto;
+	padding: 50px;
+	position: absolute;
+	left: 50%;
+	margin-left: -315px;
+	z-index: 20;
+}
+
+.container-ajout {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #E8F1F6;
+	width: 420px;
+	height: 169px;
+	margin: 24px;
+	padding: 15px;
+}
+
+.btn-modale-valider {
+	background-color: #1D6154;
+	color: #fff;
+	border: 0;
+	border-radius: 60px;
+	height: 40px;
+	padding: 11px 38px 9px 38px;
+	font-family: 'Syne';
+	margin-top: 7px;
+	margin-bottom: 15px;
+}
+
+.box-new {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 420px;
+}
+
+p .box-new {
+	font-weight: 500;
+	font-size: 14px;
+}
+
+.input-new {
+	display: flex;
+	justify-items: flex-start;
+	align-items: center;
+	padding-left: 15px;
+	background: #fff;
+	width: 420px;
+	height: 50px;
+	font-family: 'Work Sans';
+	font-size: 14px;
+	border: 0;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.secondAlert {
+	display: none;
+	justify-items: center;
+	align-items: center;
+	color: #ff0000;
+}
